@@ -1,0 +1,55 @@
+<aura:component >
+    
+    <!-- Type of Activity Item --> 
+    <aura:attribute name="activityType" type="String"/>
+    <aura:attribute name="status" type="String"/>
+
+    <aura:attribute name="itemDetail" type="ActivityTimelineModel"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    
+    <!-- Routes to the correct Activity Item Component -->
+    
+    <aura:if isTrue="{! !empty(v.itemDetail)}">
+        
+        <aura:if isTrue="{!v.activityType == 'Transaction'}">
+            <c:ActivityTimeline_Item_Transaction itemDetail="{!v.itemDetail}" />
+        </aura:if>
+        
+        <aura:if isTrue="{!v.activityType == 'MemberLevel'}"> 
+            <c:ActivityTimeline_Item_MemberLevel itemDetail="{!v.itemDetail}" />
+        </aura:if> 
+        
+        <aura:if isTrue="{!v.activityType == 'CourseStatus'}">
+            <c:ActivityTimeline_Item_CourseStatus itemDetail="{!v.itemDetail}" />
+        </aura:if>
+        
+        <aura:if isTrue="{!v.activityType == 'ModuleResponse'}">
+            <c:ActivityTimeline_Item_ModuleResponse itemDetail="{!v.itemDetail}" />
+        </aura:if>
+        
+        <aura:if isTrue="{!v.activityType == 'BadgeMember'}">
+            <c:ActivityTimeline_Item_BadgeMember itemDetail="{!v.itemDetail}" />
+        </aura:if>
+        
+        <aura:if isTrue="{!v.activityType == 'Redemption'}">
+            <c:ActivityTimeline_Item_Redemption itemDetail="{!v.itemDetail}" />
+        </aura:if>
+        
+        <aura:if isTrue="{!v.activityType == 'Invoice'}">
+          <!--  <aura:if isTrue="{!v.status == 'Approved'}">
+                <c:ActivityTimeline_Item_InvoiceApproved itemDetail="{!v.itemDetail}" />
+            </aura:if>
+           <aura:if isTrue="{!v.status == 'Open'}">
+                <c:ActivityTimeline_Item_InvoiceOpen itemDetail="{!v.itemDetail}" />
+            </aura:if>
+            <aura:if isTrue="{!v.status == 'Rejected'}">
+                <c:ActivityTimeline_Item_InvoiceRejected itemDetail="{!v.itemDetail}" />
+            </aura:if>-->
+            <c:ActivityTimeline_Item_Invoice itemDetail="{!v.itemDetail}" />
+        </aura:if>
+        
+    </aura:if>
+    
+</aura:component>

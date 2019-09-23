@@ -1,0 +1,14 @@
+<design:component>
+    
+    <design:attribute name ="transactions" label="Show Transactions"/>
+    <design:attribute name ="memberlevel" label="Show Member Level Events"/>
+    <design:attribute name ="moduleresponse" label="Show Module Responses"/>
+    <design:attribute name ="coursestatus" label="Show Course Status"/>
+    <design:attribute name ="badgemember" label="Show Member Badge Events"/>
+    <design:attribute name ="redemption" label="Show Redemptions"/>
+    <design:attribute name ="invoice" label="Show Invoice Events"/>
+    
+    <design:attribute name ="showFilter" label="Show Date Filter"/>
+    
+    <design:attribute name ="quantity" label="Quantity of Items"/>
+</design:component>

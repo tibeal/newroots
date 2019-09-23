@@ -1,0 +1,67 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="GLOBAL"
+                controller="ActivityTimelineController" >
+    
+    <aura:attribute name="member" type="FieloPLT__Member__c"/>
+    <aura:attribute name="members" type="FieloPLT__Member__c[]"/>
+    <aura:attribute name="startDate" type="Date" default=""/>
+    <aura:attribute name="endDate" type="Date" default=""/>
+    
+    <!-- DESIGN ATTRIBUTES -->  
+    <aura:attribute name="transactions" type="Boolean" default="true" />
+    <aura:attribute name="memberlevel" type="Boolean" default="true" />
+    <aura:attribute name="moduleresponse" type="Boolean" default="true" />
+    <aura:attribute name="coursestatus" type="Boolean" default="true" />
+    <aura:attribute name="badgemember" type="Boolean" default="true" />
+    <aura:attribute name="redemption" type="Boolean" default="true" />
+    <aura:attribute name="invoice" type="Boolean" default="true" />
+    <aura:attribute name="showFilter" type="Boolean" default="true" />
+    <!-- PAGINADOR -->
+    <aura:attribute name="page" type="Integer" default="0"/>
+    <aura:attribute name="quantity" type="Integer" default="5" access="global"/>
+    <aura:attribute name="offset" type="Integer"/>  
+    <aura:attribute name="lastPage" type="Boolean" default="false" />
+    
+    <!-- EVENTS -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="FieloPLT:UpdateMemberEvent" action="{!c.updateMember}"/>
+    <aura:handler name="paging" event="c:PaginatorEvent" action="{!c.paginator}" default="false"/>
+    <aura:handler name="datefilter" event="c:DateFilterEvent" action="{!c.updateDates}" />
+    
+    <!-- List of Activity Timeline Items -->
+    <aura:attribute name="allRecords" type="ActivityTimelineModel"/>
+    <aura:attribute name="timelineItems" type="ActivityTimelineModel"/>   
+    
+    <!-- BODY -->
+    
+    <aura:if isTrue="{! and(v.members.length>1,empty(v.member))}">
+        <c:ChooseMember members="{!v.members}" choosemember="{!c.handleChooseMember}"/>
+    </aura:if>
+    <aura:if isTrue="{! !empty(v.member)}">
+        <aura:if isTrue="{!v.showFilter}">
+        	<c:DateFilter />
+        </aura:if>
+        <br />
+        <aura:if isTrue="{! !empty(v.allRecords)}">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_striped">
+                <thead>
+                    <tr scope="col" class="slds-text-title_caps">
+                        <th class="slds-size_1-of-12 slds-float_left" title="Icon"> Activity</th>
+                        <th class="slds-size_8-of-12 slds-float_left hidden" title="Activity"> </th>
+                        <th class="slds-size_3-of-12 slds-float_right hidden" title="Datetime"> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.timelineItems}" var="item">
+                        <c:ActivityTimeline_Item itemDetail="{!item}" activityType="{!item.ActivityTimelineType}" status="{!item.Status}"/>
+                    </aura:iteration>
+                    
+                    
+                    <c:Paginator quantity="{!v.quantity}" lastPage="{!v.lastPage}"/>
+                    
+                    <br />
+                    
+                </tbody>
+            </table>
+        </aura:if>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,19 @@
+<aura:component >
+    <aura:attribute name="member" type="FieloPLT__Member__c"/>
+    <aura:attribute name="members" type="FieloPLT__Member__c[]"/>
+    <aura:attribute name="columns" type="List" default="[
+                                                        {label: 'Name', fieldName: 'Name', type: 'text'},
+                                                        {label: 'Program name', fieldName: 'programName', type: 'text'}
+                                                        ]"/>
+    
+    <aura:registerEvent name="choosemember" type="c:ChooseMemberEvent"/>
+    
+    <lightning:datatable columns="{!v.columns}"
+                         data="{!v.members}"
+                         keyField="id"
+                         maxRowSelection="1"
+                         onrowselection="{! c.updateMember }"/>
+    <br/>
+     <lightning:button variant="brand" label="Choose Member" onclick="{! c.clickButton}" />
+    
+</aura:component>

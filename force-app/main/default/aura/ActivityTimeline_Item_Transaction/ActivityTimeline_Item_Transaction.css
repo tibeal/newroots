@@ -1,0 +1,11 @@
+.THIS .transaction-iconColor{
+     background-color:#7DCF64;
+ }
+
+.THIS .transaction-negative-iconColor{
+     background-color:#F5675B;
+ }
+
+.THIS .transaction-iconColor svg {
+    fill:rgb(255,255,255);
+}

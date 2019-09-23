@@ -1,0 +1,52 @@
+<aura:component >
+    
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="displayDate" type="Object"/>
+    <aura:attribute name="itemDetail" type="ActivityTimelineModel"/>
+    <aura:attribute name="timeline" type="Boolean" default="true"/>
+    <aura:attribute name="datatable" type="Boolean" default="false"/>
+    
+    <!-- EVENTS -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <!-- BODY-->
+    <aura:if isTrue="{! !empty(v.itemDetail)}">
+      
+        <aura:if isTrue="{!v.timeline}">
+            <ul class="slds-timeline">
+                <li>
+                    <div class="slds-timeline__item_expandable slds-timeline__item_email">
+                        <div class="slds-media">
+                            <div class="slds-media__figure">
+                                <button class="slds-button slds-button_icon" aria-controls="email-item-base" aria-expanded="false">
+                                    <lightning:icon iconName="utility:chevronright" size="xx-small"/>
+                                </button>
+                                
+                                <div data-label="Icon" class="slds-icon_container slds-timeline__icon testclass" title="task">
+                                        <lightning:icon iconName="action:share_file" size="x-small"/>
+                                </div>
+                            </div>
+                            <div class="slds-media__body">
+                                <div class="slds-grid slds-grid_align-spread slds-timeline__trigger">
+                                    <div data-label="Activity" class="slds-grid slds-grid_vertical-align-center slds-hyphenate">
+                                        <h3 class="slds-hyphenate">
+                                            <a href="javascript:void(0);">
+                                                    <strong>{!format($Label.c.InvoiceSubmit, v.itemDetail.InvoiceNumber)} </strong>
+                                            </a>
+                                        </h3>
+                                        
+                                    </div>
+                                    <div data-label="Datetime" class="slds-timeline__actions slds-timeline__actions_inline slds-float_right">
+                                        <p class="slds-timeline__date"><lightning:relativeDateTime value="{!v.displayDate}"/></p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </aura:if>
+        
+    </aura:if>
+</aura:component>

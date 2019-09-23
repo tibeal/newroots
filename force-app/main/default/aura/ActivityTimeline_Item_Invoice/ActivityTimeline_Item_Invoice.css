@@ -1,0 +1,10 @@
+.THIS .avatarIconColorApproved{
+     background-color:#7DCF64;
+ }
+.THIS .avatarIconColorRejected{
+     background-color:#F5675B;
+ }
+
+.THIS .oavatarIconColr svg {
+    fill:rgb(255,255,255);
+}

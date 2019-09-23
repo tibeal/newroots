@@ -1,0 +1,74 @@
+<aura:component >
+    
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="displayDate" type="Object"/>
+    <aura:attribute name="itemDetail" type="ActivityTimelineModel"/>
+    <aura:attribute name="timeline" type="Boolean" default="true"/>
+    <aura:attribute name="datatable" type="Boolean" default="false"/>
+    
+    <!-- EVENTS -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <!-- BODY-->
+    <aura:if isTrue="{! !empty(v.itemDetail)}">
+       
+        <aura:if isTrue="{!v.timeline}">
+            <ul class="slds-timeline">
+                <li>
+                    <div class="slds-timeline__item_expandable slds-timeline__item_email">
+                        <div class="slds-media">
+                            <div class="slds-media__figure">
+                                <button class="slds-button slds-button_icon" aria-controls="email-item-base" aria-expanded="false">
+                                    <lightning:icon iconName="utility:chevronright" size="xx-small"/>
+                                </button>
+                                
+                                <div data-label="Icon" class="slds-icon_container slds-timeline__icon testclass" title="task">
+                                    <aura:if isTrue="{!equals(v.itemDetail.Status, 'Approved')}">
+                                        <lightning:icon class="oavatarIconColr avatarIconColorApproved" iconName="action:description" size="x-small"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!equals(v.itemDetail.Status, 'Rejected')}">
+                                        <lightning:icon class="oavatarIconColr avatarIconColorRejected" iconName="action:following" size="x-small"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!equals(v.itemDetail.Status, 'Open')}">
+                                        <lightning:icon iconName="action:share_file" size="x-small"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!equals(v.itemDetail.Status, 'Pending for Approval')}">
+                                        <lightning:icon iconName="action:share_file" size="x-small"/>
+                                    </aura:if>
+                                </div>
+                            </div>
+                            <div class="slds-media__body">
+                                <div class="slds-grid slds-grid_align-spread slds-timeline__trigger">
+                                    <div data-label="Activity" class="slds-grid slds-grid_vertical-align-center slds-hyphenate">
+                                        <h3 class="slds-hyphenate">
+                                            <a href="javascript:void(0);">
+                                                <aura:if isTrue="{!equals(v.itemDetail.Status, 'Approved')}">
+                                                    <strong>{!format($Label.c.InvoiceApproved, v.itemDetail.InvoiceNumber)} </strong>                                                   
+                                                </aura:if>
+                                                <aura:if isTrue="{!equals(v.itemDetail.Status, 'Rejected')}">
+                                                    <strong>{!format($Label.c.InvoiceRejected, v.itemDetail.InvoiceNumber)} </strong>
+                                                </aura:if>
+                                                <aura:if isTrue="{!equals(v.itemDetail.Status, 'Open')}">
+                                                    <strong>{!format($Label.c.InvoiceSubmit, v.itemDetail.InvoiceNumber)} </strong>
+                                                </aura:if>
+                                                <aura:if isTrue="{!equals(v.itemDetail.Status, 'Pending for Approval')}">
+                                                    <strong>{!format($Label.c.InvoiceSubmit, v.itemDetail.InvoiceNumber)} </strong>
+                                                </aura:if>
+                                            </a>
+                                        </h3>
+                                        
+                                    </div>
+                                    <div data-label="Datetime" class="slds-timeline__actions slds-timeline__actions_inline slds-float_right">
+                                        <p class="slds-timeline__date"><lightning:relativeDateTime value="{!v.displayDate}"/></p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </aura:if>
+        
+    </aura:if>
+</aura:component>

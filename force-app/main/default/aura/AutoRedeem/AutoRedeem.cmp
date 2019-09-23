@@ -1,0 +1,69 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global"
+                controller="AutoRedeemController">
+    
+    <aura:attribute name="startDate" type="Date" />
+    <aura:attribute name="endDate" type="Date" />
+    <aura:attribute name="dateValidationError" type="Boolean" default="false"/>
+    <aura:attribute name="enableButton" type="Boolean" default="false"/>
+    <aura:attribute name="hideSuccess" type="Boolean" default="true"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    
+    <aura:registerEvent name="datefilter" type="c:DateFilterEvent2"/>
+    <aura:handler name="datefilter" event="c:DateFilterEvent2" action="{!c.logDates}" />
+    
+    <lightning:layout verticalAlign="center" multipleRows="true">
+        <!-- add space at the beggining of the component  -->
+        <lightning:layoutItem size="12">
+            <br /> <br />            
+        </lightning:layoutItem>
+        
+        <!-- date validations  -->
+        <aura:if isTrue="{!v.dateValidationError}">
+            <lightning:layoutItem size="12">
+                <div class="slds-text-color_error slds-p-left_x-small">
+                    Date must be in present or in future..
+                </div>
+            </lightning:layoutItem>
+        </aura:if>
+        
+        <br />
+        <aura:if isTrue="{! v.hideSuccess}">
+            <lightning:layoutItem size="1"></lightning:layoutItem>
+            <lightning:layoutItem size="4">
+                <lightning:input type="date" name="startDate" label="From:" value="{!v.startDate}" />
+            </lightning:layoutItem>
+            <lightning:layoutItem size="1"></lightning:layoutItem>
+            <lightning:layoutItem size="4">
+                <lightning:input type="date" class="{! v.dateValidationError ? 'slds-has-error' : ''}" 
+                                 name="endDate" label="To:" value="{!v.endDate}" onchange="{!c.checkEndDate}"/>
+                
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2"></lightning:layoutItem>
+            
+            <!-- button and layoutItems to centralize the view  -->
+            <lightning:layoutItem size="4"></lightning:layoutItem>
+            <lightning:layoutItem size="4">
+                <br />            
+                <lightning:button variant="brand" label="Auto Redeem" onclick="{!c.autoRedeem}" disabled="{! v.enableButton}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4"></lightning:layoutItem>
+            <aura:if isTrue="{!v.showSpinner}">
+                <div class="exampleHolder">
+                    <lightning:spinner alternativeText="Loading" size="medium" />
+                </div>
+                
+            </aura:if>
+            <!-- add space at the end of the component  -->
+            <lightning:layoutItem size="12">
+                <br /> <br />            
+            </lightning:layoutItem>
+            <aura:set attribute="else">
+                <lightning:layout verticalAlign="center" multipleRows="true">
+                    <lightning:layoutItem class="" size="12"><h2>Success!</h2></lightning:layoutItem>
+                    <lightning:layoutItem class="" size="12"><h4>All Cash Points from the chosen period were redeemed.</h4></lightning:layoutItem>
+                </lightning:layout>
+            </aura:set>
+        </aura:if>
+        
+    </lightning:layout>
+</aura:component>

@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Crop_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Crop Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Apple</fullName>
+                <default>false</default>
+                <label>Apple</label>
+            </value>
+            <value>
+                <fullName>Artichoke</fullName>
+                <default>false</default>
+                <label>Artichoke</label>
+            </value>
+            <value>
+                <fullName>Asparagus</fullName>
+                <default>false</default>
+                <label>Asparagus</label>
+            </value>
+            <value>
+                <fullName>Barley</fullName>
+                <default>false</default>
+                <label>Barley</label>
+            </value>
+            <value>
+                <fullName>Bean</fullName>
+                <default>false</default>
+                <label>Bean</label>
+            </value>
+            <value>
+                <fullName>Beet</fullName>
+                <default>false</default>
+                <label>Beet</label>
+            </value>
+            <value>
+                <fullName>Borecole</fullName>
+                <default>false</default>
+                <label>Borecole</label>
+            </value>
+            <value>
+                <fullName>Brassicae</fullName>
+                <default>false</default>
+                <label>Brassicae</label>
+            </value>
+            <value>
+                <fullName>Broad Beans</fullName>
+                <default>false</default>
+                <label>Broad Beans</label>
+            </value>
+            <value>
+                <fullName>Broccoli</fullName>
+                <default>false</default>
+                <label>Broccoli</label>
+            </value>
+            <value>
+                <fullName>Brussels Sprouts</fullName>
+                <default>false</default>
+                <label>Brussels Sprouts</label>
+            </value>
+            <value>
+                <fullName>Bulbs</fullName>
+                <default>false</default>
+                <label>Bulbs</label>
+            </value>
+            <value>
+                <fullName>Cabbage</fullName>
+                <default>false</default>
+                <label>Cabbage</label>
+            </value>
+            <value>
+                <fullName>Calabrese</fullName>
+                <default>false</default>
+                <label>Calabrese</label>
+            </value>
+            <value>
+                <fullName>Capsicum</fullName>
+                <default>false</default>
+                <label>Capsicum</label>
+            </value>
+            <value>
+                <fullName>Carrots</fullName>
+                <default>false</default>
+                <label>Carrots</label>
+            </value>
+            <value>
+                <fullName>Cauliflower</fullName>
+                <default>false</default>
+                <label>Cauliflower</label>
+            </value>
+            <value>
+                <fullName>Celery</fullName>
+                <default>false</default>
+                <label>Celery</label>
+            </value>
+            <value>
+                <fullName>Cereal</fullName>
+                <default>false</default>
+                <label>Cereal</label>
+            </value>
+            <value>
+                <fullName>Cereals</fullName>
+                <default>false</default>
+                <label>Cereals</label>
+            </value>
+            <value>
+                <fullName>Courgettes</fullName>
+                <default>false</default>
+                <label>Courgettes</label>
+            </value>
+            <value>
+                <fullName>Cucumber</fullName>
+                <default>false</default>
+                <label>Cucumber</label>
+            </value>
+            <value>
+                <fullName>Cutflowers</fullName>
+                <default>false</default>
+                <label>Cutflowers</label>
+            </value>
+            <value>
+                <fullName>Durum Wheat</fullName>
+                <default>false</default>
+                <label>Durum Wheat</label>
+            </value>
+            <value>
+                <fullName>Dwarf French Beans</fullName>
+                <default>false</default>
+                <label>Dwarf French Beans</label>
+            </value>
+            <value>
+                <fullName>Eggplant</fullName>
+                <default>false</default>
+                <label>Eggplant</label>
+            </value>
+            <value>
+                <fullName>Endive</fullName>
+                <default>false</default>
+                <label>Endive</label>
+            </value>
+            <value>
+                <fullName>Fruit</fullName>
+                <default>false</default>
+                <label>Fruit</label>
+            </value>
+            <value>
+                <fullName>Fruiting Veg</fullName>
+                <default>false</default>
+                <label>Fruiting Veg</label>
+            </value>
+            <value>
+                <fullName>Grass</fullName>
+                <default>false</default>
+                <label>Grass</label>
+            </value>
+            <value>
+                <fullName>Grass Forrage</fullName>
+                <default>false</default>
+                <label>Grass Forrage</label>
+            </value>
+            <value>
+                <fullName>Green Beans</fullName>
+                <default>false</default>
+                <label>Green Beans</label>
+            </value>
+            <value>
+                <fullName>Herbs</fullName>
+                <default>false</default>
+                <label>Herbs</label>
+            </value>
+            <value>
+                <fullName>Leek</fullName>
+                <default>false</default>
+                <label>Leek</label>
+            </value>
+            <value>
+                <fullName>Leeks</fullName>
+                <default>false</default>
+                <label>Leeks</label>
+            </value>
+            <value>
+                <fullName>Legumes</fullName>
+                <default>false</default>
+                <label>Legumes</label>
+            </value>
+            <value>
+                <fullName>Lettuce</fullName>
+                <default>false</default>
+                <label>Lettuce</label>
+            </value>
+            <value>
+                <fullName>Linseed</fullName>
+                <default>false</default>
+                <label>Linseed</label>
+            </value>
+            <value>
+                <fullName>Maize</fullName>
+                <default>false</default>
+                <label>Maize</label>
+            </value>
+            <value>
+                <fullName>Melon</fullName>
+                <default>false</default>
+                <label>Melon</label>
+            </value>
+            <value>
+                <fullName>Mushrooms</fullName>
+                <default>false</default>
+                <label>Mushrooms</label>
+            </value>
+            <value>
+                <fullName>Nursery</fullName>
+                <default>false</default>
+                <label>Nursery</label>
+            </value>
+            <value>
+                <fullName>Oats</fullName>
+                <default>false</default>
+                <label>Oats</label>
+            </value>
+            <value>
+                <fullName>Oilseed rape</fullName>
+                <default>false</default>
+                <label>Oilseed rape</label>
+            </value>
+            <value>
+                <fullName>Oilseeds</fullName>
+                <default>false</default>
+                <label>Oilseeds</label>
+            </value>
+            <value>
+                <fullName>Onion</fullName>
+                <default>false</default>
+                <label>Onion</label>
+            </value>
+            <value>
+                <fullName>Onions</fullName>
+                <default>false</default>
+                <label>Onions</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Parsnips</fullName>
+                <default>false</default>
+                <label>Parsnips</label>
+            </value>
+            <value>
+                <fullName>Pear</fullName>
+                <default>false</default>
+                <label>Pear</label>
+            </value>
+            <value>
+                <fullName>Peas</fullName>
+                <default>false</default>
+                <label>Peas</label>
+            </value>
+            <value>
+                <fullName>Peas (Combining)</fullName>
+                <default>false</default>
+                <label>Peas (Combining)</label>
+            </value>
+            <value>
+                <fullName>Peas (Vining)</fullName>
+                <default>false</default>
+                <label>Peas (Vining)</label>
+            </value>
+            <value>
+                <fullName>Peony</fullName>
+                <default>false</default>
+                <label>Peony</label>
+            </value>
+            <value>
+                <fullName>Potato</fullName>
+                <default>false</default>
+                <label>Potato</label>
+            </value>
+            <value>
+                <fullName>Potplant</fullName>
+                <default>false</default>
+                <label>Potplant</label>
+            </value>
+            <value>
+                <fullName>Radish</fullName>
+                <default>false</default>
+                <label>Radish</label>
+            </value>
+            <value>
+                <fullName>Red Beet</fullName>
+                <default>false</default>
+                <label>Red Beet</label>
+            </value>
+            <value>
+                <fullName>Red Wheat</fullName>
+                <default>false</default>
+                <label>Red Wheat</label>
+            </value>
+            <value>
+                <fullName>Rhubarb</fullName>
+                <default>false</default>
+                <label>Rhubarb</label>
+            </value>
+            <value>
+                <fullName>Rye</fullName>
+                <default>false</default>
+                <label>Rye</label>
+            </value>
+            <value>
+                <fullName>Rye &amp; Triticale</fullName>
+                <default>false</default>
+                <label>Rye &amp; Triticale</label>
+            </value>
+            <value>
+                <fullName>Rygrass</fullName>
+                <default>false</default>
+                <label>Rygrass</label>
+            </value>
+            <value>
+                <fullName>Soft Fruit</fullName>
+                <default>false</default>
+                <label>Soft Fruit</label>
+            </value>
+            <value>
+                <fullName>Sorghum</fullName>
+                <default>false</default>
+                <label>Sorghum</label>
+            </value>
+            <value>
+                <fullName>Soya Beans</fullName>
+                <default>false</default>
+                <label>Soya Beans</label>
+            </value>
+            <value>
+                <fullName>Spinach</fullName>
+                <default>false</default>
+                <label>Spinach</label>
+            </value>
+            <value>
+                <fullName>Spring Barley</fullName>
+                <default>false</default>
+                <label>Spring Barley</label>
+            </value>
+            <value>
+                <fullName>Spring Beans</fullName>
+                <default>false</default>
+                <label>Spring Beans</label>
+            </value>
+            <value>
+                <fullName>Spring Oats</fullName>
+                <default>false</default>
+                <label>Spring Oats</label>
+            </value>
+            <value>
+                <fullName>Spring Oilseed Rape</fullName>
+                <default>false</default>
+                <label>Spring Oilseed Rape</label>
+            </value>
+            <value>
+                <fullName>Spring Wheat</fullName>
+                <default>false</default>
+                <label>Spring Wheat</label>
+            </value>
+            <value>
+                <fullName>Squash</fullName>
+                <default>false</default>
+                <label>Squash</label>
+            </value>
+            <value>
+                <fullName>Stone Fruit</fullName>
+                <default>false</default>
+                <label>Stone Fruit</label>
+            </value>
+            <value>
+                <fullName>Strawberry</fullName>
+                <default>false</default>
+                <label>Strawberry</label>
+            </value>
+            <value>
+                <fullName>Sugar Beet</fullName>
+                <default>false</default>
+                <label>Sugar Beet</label>
+            </value>
+            <value>
+                <fullName>Sweetcorn</fullName>
+                <default>false</default>
+                <label>Sweetcorn</label>
+            </value>
+            <value>
+                <fullName>Tomato</fullName>
+                <default>false</default>
+                <label>Tomato</label>
+            </value>
+            <value>
+                <fullName>Top Fruit</fullName>
+                <default>false</default>
+                <label>Top Fruit</label>
+            </value>
+            <value>
+                <fullName>Triticale</fullName>
+                <default>false</default>
+                <label>Triticale</label>
+            </value>
+            <value>
+                <fullName>Turnips</fullName>
+                <default>false</default>
+                <label>Turnips</label>
+            </value>
+            <value>
+                <fullName>Veg</fullName>
+                <default>false</default>
+                <label>Veg</label>
+            </value>
+            <value>
+                <fullName>Vegetables</fullName>
+                <default>false</default>
+                <label>Vegetables</label>
+            </value>
+            <value>
+                <fullName>Wheat</fullName>
+                <default>false</default>
+                <label>Wheat</label>
+            </value>
+            <value>
+                <fullName>Winter Barley</fullName>
+                <default>false</default>
+                <label>Winter Barley</label>
+            </value>
+            <value>
+                <fullName>Winter Beans</fullName>
+                <default>false</default>
+                <label>Winter Beans</label>
+            </value>
+            <value>
+                <fullName>Winter - Hybrid Barley</fullName>
+                <default>false</default>
+                <label>Winter - Hybrid Barley</label>
+            </value>
+            <value>
+                <fullName>Winter Oats</fullName>
+                <default>false</default>
+                <label>Winter Oats</label>
+            </value>
+            <value>
+                <fullName>Winter Oilseed Rape</fullName>
+                <default>false</default>
+                <label>Winter Oilseed Rape</label>
+            </value>
+            <value>
+                <fullName>Winter Wheat</fullName>
+                <default>false</default>
+                <label>Winter Wheat</label>
+            </value>
+            <value>
+                <fullName>Brassica general</fullName>
+                <default>false</default>
+                <label>Brassica general</label>
+            </value>
+            <value>
+                <fullName>Solanaceae general</fullName>
+                <default>false</default>
+                <label>Solanaceae general</label>
+            </value>
+            <value>
+                <fullName>LSV general</fullName>
+                <default>false</default>
+                <label>LSV general</label>
+            </value>
+            <value>
+                <fullName>Roots &amp; Bulbs general</fullName>
+                <default>false</default>
+                <label>Roots &amp; Bulbs general</label>
+            </value>
+            <value>
+                <fullName>Leafy general</fullName>
+                <default>false</default>
+                <label>Leafy general</label>
+            </value>
+            <value>
+                <fullName>Cucurbits general</fullName>
+                <default>false</default>
+                <label>Cucurbits general</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

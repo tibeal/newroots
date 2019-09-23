@@ -1,0 +1,17 @@
+.THIS {
+    width: 400px;
+}
+
+.THIS .slds-button_icon{
+    visibility: hidden;
+}
+
+
+.THIS .slds-icon_container {
+    margin-left: -0.05rem;
+    
+}
+
+.THIS .hidden{
+    display:none;
+}
