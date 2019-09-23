@@ -7,8 +7,6 @@
     <members>ActivityTimelineModelWrapper</members>
     <members>AutoRedeemController</members>
     <members>createMember</members>
-    <members>MyProfilePageController</members>
-    <members>MyProfilePageControllerTest</members>
     <name>ApexClass</name>
   </types>
   <types>
